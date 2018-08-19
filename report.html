@@ -12828,7 +12828,7 @@ Look at the graph at the bottom left from the cell above(the visualization creat
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong></p>
+<p><strong>Answer:</strong></p>
 <p>Overall, I recommend to CharityML that they use the AdaBoost method for identifying individuals making more than 50k.</p>
 <p>When 100% of the training data is used, the AdaBoost model is the best (F = ~0.7) with DecisionTree and KNN being roughly the same (F = ~0.6) in second place. The accuracy of AdaBoost is also marginally better than both DecisionTree and KNN.</p>
 <p>The KNN model is the slowest to train by a long margin. AdaBoost takes longer than DecisionTrees but is still quick for a data set of this size.</p>
@@ -12856,9 +12856,9 @@ Look at the graph at the bottom left from the cell above(the visualization creat
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>We are building a model that will learn what a high-earning (&gt;$50k) individual looks like, based on demographic information we have been given. We will then use this model to predict other high-earning individuals so you can target them directly for fund-raising purposes.</p>
-<p>The model we are using is called an <em>ensemble</em> model. This will combine the best parts of many underlying models, similar to how one might crowd-source ideas from a large community of people.</p>
-<p>We will tweak this model so that the number of false positives (when our model indicates a person earns &gt;$50k but this is not in fact the case) is limited, so that the time and cost wasted in reaching out to these people is reduced.</p>
+<p>We are building a model that will learn what a high-earning (&gt;$50k) individual looks like, based on demographic information we have been given. We will then use this model to predict other high-earning individuals so you can target them directly for fund-raising purposes. We call this process "classification".</p>
+<p>The model we are using is called Adaboost - this is what's known as an <em>ensemble</em> model. What this means is we will combine the best parts of many underlying models, similar to how one might crowd-source the best ideas from a large community of people. These underlying models are generally "decision trees" - a decision tree is a structure that generates different outcomes depending on decision paths taken at through the tree, decisions at each node being governed by attributes (e.g. age, qualifications etc.) of the data. Adaboost will then aggregate the outcomes of all these underlying decision tree learners in an intelligent way to "boost" the accuracy of the overall model.</p>
+<p>We will also tweak this model so that the number of false positives (when our model indicates a person earns &gt;$50k but this is not in fact the case) is limited, so that the time and cost wasted in reaching out to these people is reduced.</p>
 
 </div>
 </div>
